@@ -1,0 +1,478 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:teal;
+}
+.social-nav {
+  z-index: 3000;
+  position: fixed;
+  top: 76%;
+  left: 1.1%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.vl1{
+  border-left: 1.5px solid white;
+  height: 6.5vw;
+  z-index: 3000;
+  position: fixed;
+  top: 95%;
+  left: 2.335%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* Style the icon bar links */
+.social-nav a {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.4s ease;
+}
+.social-nav a i{
+  transition: transform 0.4s ease;
+}
+.emailvl {
+  writing-mode: vertical-lr;
+  font-size: .8em;
+  letter-spacing: .2em;
+  z-index: 3000;
+  position: fixed;
+  top: 77%;
+  left: 96%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.emailvl a{
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+.emailvl a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+.emailvl a:hover {
+  transform: translateY(-2.5%);
+  color: lime;
+}
+.vl2{
+  border-left: 1.5px solid white;
+  height: 5vw;
+  z-index: 3000;
+  position: fixed;
+  top: 95.4%;
+  left: 97.1%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* Style the social media icons with color, if you want */
+.fab:hover {
+  color: lime;
+  transform: translateY(-15%);
+}
+.autohide{
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+.scrolled-down{
+  transform:translateY(-100%); transition: 0.3s ease-out;
+}
+.scrolled-up{
+  transform:translateY(0); transition: 0.3s ease-out;
+}
+.navbar {
+    background-color:teal;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-items: center;
+    padding: 1vw;
+  }
+  .navbar h1 {
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+  }
+  .navbar h1 a{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+  }
+  .navbar ul {
+      list-style-type: none;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 20vw;
+  }
+  .navbar ul > li {
+      margin: 0;
+      padding: 0;
+      padding-left: .3;
+      padding-right: .7vw;
+      font-size: 1.1em;
+      display: inline-block;
+      /**margin: 8px;**/
+  }
+  .navbar ul > li:last-child{
+    padding: .8vw;
+    border-style: solid;
+    border-radius: 5px;
+    color: purple;
+  }
+  .navbar ul > li:last-child a{
+    color: white;
+  }
+  .navbar a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  .t1 a:hover {
+    color: purple;
+    border-bottom: 1px solid white;
+    padding-bottom: 5%;
+  }
+  .navbar h1 a:hover {
+    color: purple;
+  }
+  .t2:hover {
+    background-color: rgba(128, 0, 128, 0.2);
+  }
+  #about {
+      background-color: teal;
+      margin: 0;
+      padding-bottom: 3vw;
+      block-size: 60%;
+      display: grid; 
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr 1fr fit-content;
+      justify-items: center;
+      gap: 25px;
+      /**align-items: center;**/
+  }
+  #about img {
+    grid-row: 2;
+    background-color: white;
+    block-size: fit-content;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: scale-down;
+  }
+  /**#about section {
+      display: grid;
+      grid-template-rows: auto;
+      grid-auto-columns: 40%;
+      justify-items: center;
+      justify-content: center;
+      background-color: brown;
+  }**/
+  #about div {
+    margin-top: 0px;
+    max-width:50%;
+    text-align: justify;
+    text-justify: inter-word;
+    /**background-color: brown;**/
+  }
+  #about div p {
+    /**padding: 0;**/
+    color: white;
+    font-size: larger;
+  }
+  .sectitle {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  #about section h4,h2,p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+  }
+  #projdiv {
+    margin: 0;
+    background-color: purple;
+    
+  }
+  .cards {
+    padding: 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, .4fr));
+    /**grid-template-rows: repeat(autofill, minmax(min-content, 1fr));**/
+    justify-content: center;
+    gap: 8vw;
+  }
+  /**.cards > h1 {
+    grid-column: span 2;
+  }**/
+  /**.card {
+    margin: 3vw;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 25px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: minmax(max-content, .7fr) min-content;
+    justify-items: center;
+    text-align: justify;
+    text-justify:inter-word;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }**/
+  .cards > h1 {
+    grid-column: span 2;
+  }
+  .card {
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: minmax(1fr, max-content);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: justify;
+    text-justify:inter-word;
+  }
+  .cards .slide {
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+      transition: 0.5s;
+  }
+  .slide.card-type-1 {
+    visibility: visible;
+    block-size: 100%;
+    align-items: center;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+    justify-items: center;
+    display: grid;
+    /**grid-template-rows: minmax(max-content, .7fr) min-content;**/
+    /**align-content: space-between;**/
+    z-index: 1;
+    transition: transform .7s ease, opacity .8 ease-in-out;
+  }
+  .slide.card-type-1 img {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide.card-type-2 {
+    /**opacity: 0;**/
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(autofill, minmax(min-content,1fr));
+    align-items: center;
+    /**transition: transform .8s ease, opacity .8 ease-in-out;**/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .card:hover .slide.card-type-1{
+    transform: translateY(-30%);
+    opacity: 0;
+
+  }
+  /**.card:hover .slide.card-type-2{
+    opacity: 1;
+    transform: translateY(5%);
+  }**/
+  .slide.card-type-2 section {
+    margin: 0;
+    padding: 0;
+  }
+  /**.card img {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: purple;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+  }**/
+  .slide h1 {
+    margin-top: 1vw;
+    font-size: 1.6em;
+  }
+  .card h2 {
+    margin: 0;
+    padding: 1vw;
+    padding-top: 0;
+    padding-bottom: 1vw;
+    font-size: 1.1em;
+    color: black;
+  }
+  .card p {
+    color: black;
+    margin: 0;
+    padding: 1vw;
+    padding-top: 0;
+    padding-bottom: 1vw;
+    font-size: .8em;
+  }
+  #exp {
+    margin: 0;
+    background-color: teal;
+  }
+  #experience {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 0;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content 250px min-content;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+  }
+  #experience > h1 {
+    margin-bottom: 2vw;
+    grid-column: span 3;
+    justify-self: center;
+    color: white;
+  }
+  
+  #experience img{
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #experience section{
+    padding-top: 1vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    height: fit-content;
+    grid-column: span 2;
+    background-color: white;
+  }
+  #experience h2 {
+    color: black;
+    padding: 1vw;
+    padding-top: 0;
+    font-size: 1.8em;
+    padding-bottom: 0;
+  }
+  #experience h3 {
+    padding: 1vw;
+    font-size: 1.3em;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  #experience li {
+    color: black;
+    padding: 1vw;
+    font-size: 1em;
+    padding-top: 0;
+  }
+  #contact {
+    background-color: purple;
+    margin: 0;
+    padding-top: 7vw;
+    padding-bottom: 1vw;
+  }
+  #contact section {
+    padding: 3vw;
+    margin-bottom: 7vw;
+    display: grid;
+    grid-template-columns: 48%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    gap: 1vw;
+  }
+  #contact h4, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  #contact h4 {
+    color: lime;
+    font-size: 1.3em;
+  }
+  #contact h2 {
+    /**color: ;**/
+    font-size: 4.5em;
+    font-weight: bold;
+  }
+  #contact p {
+    margin-top: 1vw;
+    justify-self: center;
+    font-size: 1.3em;
+    color: white;
+  }
+  .navbar ul > li {
+    margin: 0;
+    padding: 0;
+    padding-left: .3;
+    padding-right: .7vw;
+    font-size: 1.1em;
+    display: inline-block;
+    /**margin: 8px;**/
+}
+#contactdiv > h3{
+  margin-top: 1vw;
+  padding: 1vw;
+  border-style: solid;
+  border-radius: 5px;
+  color: lime;
+}
+#contactdiv h3 > a:link,#contactdiv h3 > a:visited {
+  text-decoration: none;
+  color: lime;
+}
+#contactdiv > h3:hover {
+  background-color: rgba(0, 128, 128, 0.2);
+}
+.footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family:serif;
+}
+.footer a{
+  text-decoration: none;
+}
+.footer h4 {
+  margin: 0;
+  padding-top: 1vw;
+}
+.footer i {
+  margin: 0;
+  padding-top: .5vw;
+  padding-bottom: 1vw;
+}
+.footer a{
+  display: inline-block;
+  transition: color 0.4s ease;
+}
+.footer a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover {
+  color: lime;
+}
