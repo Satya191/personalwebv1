@@ -17,6 +17,9 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="text"></div>
+      </div>
     <nav class="social-nav">
         <a href="https://github.com/Satya191" class="github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/satyapandya/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
@@ -51,11 +54,15 @@
 </div>
 <div id="projdiv">
 <div class="cards" id="projects">
+    <div>
     <h1 class="sectitle" data-aos="fade-up">Featured Projects</h1>
+    <h2 data-aos="fade-up">Hover over or click project to view details</h2>
+    </div>
     <div class="card card1" data-aos="fade-up">
         <div class="slide card-type-1">
             <img src="/static/imgs/ruhappytest.png" alt="ruhappyimg">
             <h4>Sep 2021 - Oct 2021</h4>
+            <h5>**Winner Hackathon HackRU</h5>
             <h1>Virtual Parent</h1>
         </div>
         <div class="slide card-type-2">
@@ -193,7 +200,7 @@
     </section>
 </div>
 <footer class="footer">
-    <a href="https://github.com/Satya191" class="github" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/Satya191/personalwebv1" class="github" target="_blank" rel="noopener noreferrer">
         <h4>Designed & Built by Satya Pandya</h4>
         <i class="fa fa-code-branch"></i>
     </a>
@@ -252,6 +259,90 @@
 
         }); 
         // DOMContentLoaded  end
+        // ——————————————————————————————————————————————————
+        // TextScramble
+        // ——————————————————————————————————————————————————
+
+        class TextScramble {
+        constructor(el) {
+            this.el = el;
+            this.chars = '!<>-_\\/[]{}—=+*^?#________';
+            this.update = this.update.bind(this);
+        }
+        setText(newText) {
+            const oldText = this.el.innerText;
+            const length = Math.max(oldText.length, newText.length);
+            const promise = new Promise(resolve => this.resolve = resolve);
+            this.queue = [];
+            for (let i = 0; i < length; i++) {
+            const from = oldText[i] || '';
+            const to = newText[i] || '';
+            const start = Math.floor(Math.random() * 40);
+            const end = start + Math.floor(Math.random() * 40);
+            this.queue.push({ from, to, start, end });
+            }
+            cancelAnimationFrame(this.frameRequest);
+            this.frame = 0;
+            this.update();
+            return promise;
+        }
+        update() {
+            let output = '';
+            let complete = 0;
+            for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i];
+            if (this.frame >= end) {
+                complete++;
+                output += to;
+            } else if (this.frame >= start) {
+                if (!char || Math.random() < 0.28) {
+                char = this.randomChar();
+                this.queue[i].char = char;
+                }
+                output += `<span class="dud">${char}</span>`;
+            } else {
+                output += from;
+            }
+            }
+            this.el.innerHTML = output;
+            if (complete === this.queue.length) {
+            this.resolve();
+            } else {
+            this.frameRequest = requestAnimationFrame(this.update);
+            this.frame++;
+            }
+        }
+        randomChar() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)];
+        }}
+
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+        'Hi,',
+        'my name is Satya',
+        "I am a first-year CS student at Rutgers University.",
+        'I like programming,',
+        'and hope to use it for the greater good.',
+        'Here is my website showcasing my interests,',
+        'lets begin'];
+
+
+        const el = document.querySelector('.text');
+        const fx = new TextScramble(el);
+
+        let counter = 0;
+        const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+            setTimeout(next, 800);
+        });
+        counter = (counter + 1) % phrases.length;
+        };
+
+        next();
 </script>
 </body>
 </html>

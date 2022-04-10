@@ -1,7 +1,22 @@
 body {
     margin: 0;
     padding: 0;
-    background-color:teal;
+    background-color:#457b9d;
+}
+.container {
+  padding: 10vw;
+  background-color: #457b9d;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text {
+  font-weight: 100;
+  font-size: 2em;
+  color: #FAFAFA;
+}
+.dud {
+  color: #757575;
 }
 .social-nav {
   z-index: 3000;
@@ -13,7 +28,7 @@ body {
   transform: translateY(-50%);
 }
 .vl1{
-  border-left: 1.5px solid white;
+  border-left: 1.5px solid #F1FAEE;
   height: 6.5vw;
   z-index: 3000;
   position: fixed;
@@ -29,7 +44,7 @@ body {
   text-align: center;
   padding: 13px;
   transition: all 0.3s ease;
-  color: white;
+  color: #F1FAEE;
   font-size: 20px;
   transition: transform 0.4s ease;
 }
@@ -54,14 +69,14 @@ body {
 }
 .emailvl a:link, a:visited {
   text-decoration: none;
-  color: white;
+  color: #F1FAEE;
 }
 .emailvl a:hover {
   transform: translateY(-2.5%);
-  color: lime;
+  color: #57459d;
 }
 .vl2{
-  border-left: 1.5px solid white;
+  border-left: 1.5px solid #F1FAEE;
   height: 5vw;
   z-index: 3000;
   position: fixed;
@@ -73,7 +88,7 @@ body {
 }
 /* Style the social media icons with color, if you want */
 .fab:hover {
-  color: lime;
+  color: #57459d;
   transform: translateY(-15%);
 }
 .autohide{
@@ -91,7 +106,7 @@ body {
   transform:translateY(0); transition: 0.3s ease-out;
 }
 .navbar {
-    background-color:teal;
+    background-color: #1d3557;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 0;
     padding: 0;
@@ -132,28 +147,28 @@ body {
     padding: .8vw;
     border-style: solid;
     border-radius: 5px;
-    color: purple;
+    color: #57459d;
   }
   .navbar ul > li:last-child a{
-    color: white;
+    color: #F1FAEE;
   }
   .navbar a:link, a:visited {
     text-decoration: none;
-    color: white;
+    color: #F1FAEE;
   }
   .t1 a:hover {
-    color: purple;
-    border-bottom: 1px solid white;
+    color: #457b9d;
+    border-bottom: 1px solid #F1FAEE;
     padding-bottom: 5%;
   }
   .navbar h1 a:hover {
-    color: purple;
+    color: #457b9d;
   }
   .t2:hover {
-    background-color: rgba(128, 0, 128, 0.2);
+    background-color: rgba(69, 123, 157, 0.2);
   }
   #about {
-      background-color: teal;
+      background-color: #1d3557;
       margin: 0;
       padding-bottom: 3vw;
       block-size: 60%;
@@ -190,23 +205,23 @@ body {
   }
   #about div p {
     /**padding: 0;**/
-    color: white;
+    color: #F1FAEE;
     font-size: larger;
   }
   .sectitle {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
+    color: #F1FAEE;
     text-align: center;
     margin-bottom: 0;
   }
   #about section h4,h2,p {
     margin: 0;
     padding: 10px;
-    color: white;
+    color: #F1FAEE;
   }
   #projdiv {
     margin: 0;
-    background-color: purple;
+    background-color: #457b9d;
     
   }
   .cards {
@@ -217,6 +232,12 @@ body {
     justify-content: center;
     gap: 8vw;
   }
+  .cards > h2 {
+    grid-column: span 2;
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+  }
   /**.cards > h1 {
     grid-column: span 2;
   }**/
@@ -226,7 +247,7 @@ body {
     padding: 0;
     margin-bottom: 0;
     border-radius: 25px;
-    background-color: white;
+    background-color: #F1FAEE;
     display: grid;
     grid-template-rows: minmax(max-content, .7fr) min-content;
     justify-items: center;
@@ -234,8 +255,15 @@ body {
     text-justify:inter-word;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }**/
-  .cards > h1 {
+  .cards > div:nth-child(1) {
     grid-column: span 2;
+    display: grid;
+    justify-items: center;
+  }
+  .cards > div:nth-child(1) h2 {
+    color: white;
+    margin-top: 2vw;
+    font-size: 1.4em;
   }
   .card {
     border-radius: 25px;
@@ -311,6 +339,11 @@ body {
     margin-top: 1vw;
     font-size: 1.6em;
   }
+  .slide h5 {
+    margin: 0;
+    padding: 0;
+    color: red;
+  }
   .card h2 {
     margin: 0;
     padding: 1vw;
@@ -329,7 +362,7 @@ body {
   }
   #exp {
     margin: 0;
-    background-color: teal;
+    background-color: #1d3557;
   }
   #experience {
     margin-left: 10vw;
@@ -339,7 +372,7 @@ body {
     padding-bottom: 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content min-content 250px min-content;
+    grid-template-rows: min-content min-content min-content min-content min-content;
     align-content: center;
     justify-content: center;
     gap: 2vw;
@@ -350,7 +383,6 @@ body {
     justify-self: center;
     color: white;
   }
-  
   #experience img{
     border-radius: 25px;
     width: 100%;
@@ -386,10 +418,10 @@ body {
     padding-top: 0;
   }
   #contact {
-    background-color: purple;
+    background-color: #457b9d;
     margin: 0;
     padding-top: 7vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0vw;
   }
   #contact section {
     padding: 3vw;
@@ -408,7 +440,7 @@ body {
     padding: 0;
   }
   #contact h4 {
-    color: lime;
+    color: whitesmoke;
     font-size: 1.3em;
   }
   #contact h2 {
@@ -420,7 +452,7 @@ body {
     margin-top: 1vw;
     justify-self: center;
     font-size: 1.3em;
-    color: white;
+    color: #F1FAEE;
   }
   .navbar ul > li {
     margin: 0;
@@ -436,14 +468,14 @@ body {
   padding: 1vw;
   border-style: solid;
   border-radius: 5px;
-  color: lime;
+  color: #1d3557;
 }
 #contactdiv h3 > a:link,#contactdiv h3 > a:visited {
   text-decoration: none;
-  color: lime;
+  color: whitesmoke;
 }
 #contactdiv > h3:hover {
-  background-color: rgba(0, 128, 128, 0.2);
+  background-color: rgba(29, 53, 87, 0.2);;
 }
 .footer {
   margin: 0;
@@ -457,8 +489,9 @@ body {
   text-decoration: none;
 }
 .footer h4 {
+  font-size: 1.2em;
   margin: 0;
-  padding-top: 1vw;
+  padding-top: .5vw;
 }
 .footer i {
   margin: 0;
@@ -471,8 +504,8 @@ body {
 }
 .footer a:link, a:visited {
   text-decoration: none;
-  color: white;
+  color: #F1FAEE;
 }
 .footer a:hover {
-  color: lime;
+  color: #57459d;
 }
